@@ -46,7 +46,7 @@ StaticBulk::StaticBulk( WaitingQueue< list< string > >& queue, WaitingQueue< lis
 void StaticBulk::AddCommand( string&& cmd )
 {
     mCommands.push_back( move( cmd ) );
-    if( mCommands.size() == max_size )
+    if( static_cast< int >( mCommands.size() ) == max_size )
     {
         Stop();
     }
