@@ -38,7 +38,6 @@ void file_producer( WaitingQueue< list< string > >& queue ) {
         }
         
         stringstream ss;
-        ss << "/Users/isentio/Documents/Projects/Otus/lection 19 STL алгоритмы/repo/";
         ss << std::chrono::system_clock::now().time_since_epoch().count();
         ss << "_";
         ss << std::this_thread::get_id();
